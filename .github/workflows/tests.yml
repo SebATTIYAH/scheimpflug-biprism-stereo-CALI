@@ -1,0 +1,45 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10']
+    runs-on: ${{ matrix.os }}
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MPLBACKEND: Agg
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements-tested.txt
+      - run: python -m pip install --no-deps .
+      - run: python -m unittest discover -s tests -v
+      - run: python -m unittest discover -s candidate_affine/tests -v
+      - run: bbs-calibrate doctor
+      - run: python experiments/oracle_displacement.py --output work/oracle_ci --samples 500
+      - run: python tools/export_public.py --output public-source.zip
+      - run: python tools/audit_git_tree.py
+  brown:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: python -m pip install -r extensions/brown_v4/requirements.txt
+      - run: python -B joint_calibrate.py --help
+        working-directory: extensions/brown_v4
+      - run: python -B joint_reconstruct.py --help
+        working-directory: extensions/brown_v4
+      - run: python tools/audit_git_tree.py

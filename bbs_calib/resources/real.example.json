@@ -1,0 +1,123 @@
+{
+  "dataset_kind": "real",
+  "seed": 1234,
+  "images": {
+    "directory": null,
+    "pattern": "*.tif"
+  },
+  "output": "../outputs/real_run_001",
+  "board": {
+    "rows": null,
+    "cols": null,
+    "pitch_mm": null,
+    "diameter_mm": null,
+    "points_csv": null
+  },
+  "views": {
+    "left": {
+      "roi": null,
+      "branch": null
+    },
+    "right": {
+      "roi": null,
+      "branch": null
+    }
+  },
+  "ridge_masks": [],
+  "prism": {
+    "refractive_index": null,
+    "wedge_L_deg": null,
+    "wedge_R_deg": null,
+    "thickness_mm": null,
+    "aperture_mm": null,
+    "source": null,
+    "refractive_index_note": "Fill wavelength or justify an effective index for the illumination spectrum"
+  },
+  "camera": {
+    "pixel_size_um": null,
+    "m_px_per_mm": null,
+    "K_init": null,
+    "c_px": null,
+    "c_source": null,
+    "omega_p_deg": [
+      0,
+      0,
+      0
+    ],
+    "omega_source": "assumed_initial_upright",
+    "tilt_initial_deg": [
+      2,
+      2
+    ],
+    "alpha_sign": null,
+    "q_scale_mm": null,
+    "radius_limit_mm": null
+  },
+  "review": {
+    "anchors_csv": null,
+    "anchor_tolerance_px": 5
+  },
+  "detection": {
+    "polarity": "dark",
+    "threshold": null,
+    "background_sigma_px": 0,
+    "candidate_open_px": 0,
+    "min_area_px": 20,
+    "max_area_px": 10000,
+    "min_axis_ratio": 0.25,
+    "min_semiaxis_px": 2,
+    "max_semiaxis_px": 100,
+    "min_contrast": 0.15,
+    "min_profile_contrast": 0.15,
+    "min_coverage": 0.8,
+    "boundary_samples": 96,
+    "edge_search_px": 3,
+    "profile_step_px": 0.2,
+    "max_fit_error_px": 0.6,
+    "min_points_per_view": 6,
+    "ellipse_method": "fitEllipseAMS"
+  },
+  "optimization": {
+    "mode": "effective",
+    "release_K": [
+      true,
+      true,
+      true
+    ],
+    "release_omega": [
+      true,
+      true,
+      true
+    ],
+    "release_radial": [
+      true,
+      true
+    ],
+    "min_training_frames": 4,
+    "loss": "soft_l1",
+    "f_scale_px": 0.5,
+    "scale_factor_bounds": [
+      0.5,
+      2
+    ],
+    "max_shear_fraction": 0.5,
+    "max_prism_rotvec_component_deg": 12,
+    "translation_abs_limit_mm": 1000,
+    "radial_bounds": [
+      -0.15,
+      0.15
+    ],
+    "max_nfev": 180,
+    "tolerance": 1e-08,
+    "multistart": 2,
+    "multistart_omega_sigma_deg": 0.3,
+    "outlier_review_px": 2,
+    "use_covariance": false
+  },
+  "priors": {},
+  "validation": {
+    "fraction": 0.25,
+    "frames": null,
+    "translations_csv": null
+  }
+}

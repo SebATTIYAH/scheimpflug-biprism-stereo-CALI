@@ -1,0 +1,42 @@
+{
+  "model_version": "bbs-transverse-bundle-brown-v4",
+  "copied_source_import_verified": true,
+  "cli_help_checks": [
+    {
+      "entry_point": "joint_calibrate.py",
+      "command_arguments": [
+        "--help"
+      ],
+      "exit_code": 0
+    },
+    {
+      "entry_point": "joint_reconstruct.py",
+      "command_arguments": [
+        "--help"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "no_optical_refitting": true,
+  "validation_uses_local_data_not_included_in_package": true,
+  "heldout_frames": 7,
+  "valid_reconstructed_points": 756,
+  "invalid_reconstructed_points": 0,
+  "point_pair_count": 40446,
+  "heldout_scored_observations": 756,
+  "reproduced_scores": {
+    "heldout_pixel_euclidean_rms_px": 0.08011178828951193,
+    "distance_rms_mm": 0.005473316800468058,
+    "plane_rms_mm": 0.005918179959014744,
+    "rigid_rms_mm": 0.007682229325238331
+  },
+  "absolute_differences_from_independent_audit": {
+    "heldout_pixel_euclidean_rms_px": 0.0,
+    "distance_rms_mm": 0.0,
+    "plane_rms_mm": 1.3877787807814457e-17,
+    "rigid_rms_mm": 3.5822039778921066e-16
+  },
+  "numerical_comparison_tolerance": 1e-12,
+  "license_status": "BSD-3-Clause; see the repository-root LICENSE",
+  "source_files_hash_verified": true
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scheimpflug-biprism-calibration"
+version = "0.2.1rc1"
+description = "Experimental bi-telecentric Scheimpflug and biprism calibration"
+readme = "README.md"
+requires-python = ">=3.8,<3.12"
+dependencies = [
+  "numpy>=1.24,<1.27",
+  "scipy>=1.10,<1.11",
+  "opencv-python>=4.8,<4.11",
+  "matplotlib>=3.7,<3.8",
+]
+# BSD-3-Clause text is in LICENSE. Author metadata remains blank at the
+# project owner's request. SPDX metadata is omitted for compatibility with
+# the current Python 3.8 / setuptools>=61 build configuration.
+
+[project.scripts]
+bbs-calibrate = "bbs_calib.runtime:main"
+
+[tool.setuptools.packages.find]
+include = ["bbs_calib*"]
+
+[tool.setuptools.package-data]
+"bbs_calib.resources" = ["*.json"]

@@ -1,0 +1,55 @@
+{
+  "seed": 7319,
+  "kind": "synthetic_image_calibration",
+  "center_accuracy": {
+    "kind": "synthetic_true_center_error",
+    "matched_count": 480,
+    "truth_count": 480,
+    "median_px": 0.05053769162778104,
+    "p95_px": 0.09320436167210368,
+    "rms_px": 0.05630007924645785
+  },
+  "metrics": {
+    "training": {
+      "count": 360,
+      "euclidean_rms_px": 0.05258268991840831,
+      "component_rms_px": 0.03718157661433603,
+      "axis_rms_px": [
+        0.033062408716474395,
+        0.04088785160558423
+      ],
+      "axis_mean_px": [
+        2.3143684329419834e-05,
+        4.8047069389727745e-05
+      ],
+      "median_px": 0.046456073441840044,
+      "p95_px": 0.09081370251978146,
+      "max_px": 0.11672748977386779
+    },
+    "held_out": {
+      "count": 60,
+      "euclidean_rms_px": 0.06741851353559085,
+      "component_rms_px": 0.04767208809853333,
+      "axis_rms_px": [
+        0.04043306689774682,
+        0.05394833703267394
+      ],
+      "axis_mean_px": [
+        0.003104464200318091,
+        0.019323193458218195
+      ],
+      "median_px": 0.05530257679483662,
+      "p95_px": 0.11888476023313531,
+      "max_px": 0.13399327916354883
+    },
+    "whitened_sum_squares": 0.9953781404599725,
+    "robust_objective": 0.4926569870740447
+  },
+  "status": {
+    "implementation_tested": false,
+    "optimization_converged": true,
+    "geometry_valid": true,
+    "identifiability_passed": true,
+    "external_validation_available": false
+  }
+}

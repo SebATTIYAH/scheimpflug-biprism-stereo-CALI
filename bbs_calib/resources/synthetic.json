@@ -1,0 +1,157 @@
+{
+  "dataset_kind": "synthetic",
+  "seed": 7319,
+  "images": {
+    "directory": "../outputs/demo/images",
+    "pattern": "frame_*.png"
+  },
+  "output": "../outputs/synthetic_run",
+  "board": {
+    "rows": 5,
+    "cols": 6,
+    "pitch_mm": 0.35,
+    "diameter_mm": 0.13,
+    "points_csv": null
+  },
+  "views": {
+    "left": {
+      "roi": [
+        0,
+        0,
+        500,
+        500
+      ],
+      "branch": "R"
+    },
+    "right": {
+      "roi": [
+        500,
+        0,
+        500,
+        500
+      ],
+      "branch": "L"
+    }
+  },
+  "ridge_masks": [
+    [
+      480,
+      0,
+      40,
+      500
+    ]
+  ],
+  "prism": {
+    "refractive_index": 1.5,
+    "wedge_L_deg": 15,
+    "wedge_R_deg": 15.2,
+    "thickness_mm": 2,
+    "aperture_mm": {
+      "x": [
+        -7,
+        7
+      ],
+      "y": [
+        -4,
+        4
+      ]
+    },
+    "source": "synthetic_fixture_only",
+    "refractive_index_note": "Synthetic monochromatic index; not user's glass"
+  },
+  "camera": {
+    "pixel_size_um": [
+      5,
+      5
+    ],
+    "m_px_per_mm": -98,
+    "K_init": null,
+    "c_px": [
+      500,
+      250
+    ],
+    "c_source": "assumed",
+    "omega_p_deg": [
+      0.5,
+      -0.4,
+      0.7
+    ],
+    "omega_source": "assumed_initial",
+    "tilt_initial_deg": [
+      3,
+      4
+    ],
+    "alpha_sign": null,
+    "q_scale_mm": 6,
+    "radius_limit_mm": 10
+  },
+  "review": {
+    "anchors_csv": "../outputs/demo/anchors.csv",
+    "anchor_tolerance_px": 4
+  },
+  "detection": {
+    "polarity": "dark",
+    "threshold": null,
+    "min_area_px": 40,
+    "max_area_px": 500,
+    "min_axis_ratio": 0.4,
+    "boundary_samples": 80,
+    "edge_search_px": 3,
+    "profile_step_px": 0.2,
+    "max_fit_error_px": 0.5,
+    "min_points_per_view": 6
+  },
+  "optimization": {
+    "mode": "effective",
+    "release_K": [
+      true,
+      true,
+      true
+    ],
+    "release_omega": [
+      true,
+      true,
+      true
+    ],
+    "release_radial": [
+      true,
+      true
+    ],
+    "loss": "soft_l1",
+    "f_scale_px": 0.3,
+    "max_nfev": 160,
+    "tolerance": 1e-08,
+    "multistart": 2,
+    "outlier_review_px": 1
+  },
+  "validation": {
+    "fraction": 0.25,
+    "frames": [
+      "frame_06",
+      "frame_07"
+    ],
+    "translations_csv": null
+  },
+  "synthetic": {
+    "frames": 8,
+    "width": 1000,
+    "height": 500,
+    "supersampling": 4,
+    "blur_sigma_px": 0.8,
+    "noise_sigma_gray": 0.6,
+    "true_m_px_per_mm": -100,
+    "true_tilt_deg": [
+      8,
+      5
+    ],
+    "true_omega_deg": [
+      0.7,
+      -0.5,
+      0.8
+    ],
+    "true_kappa": [
+      0.004,
+      -0.001
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "kind": "oracle_calibration_coordinate_noise_check",
+  "seed": 314159,
+  "samples_per_condition": 5000,
+  "point_mm": [
+    0.1,
+    0.15,
+    20.0
+  ],
+  "displacement_mm": [
+    0.025,
+    -0.015,
+    0.04
+  ],
+  "geometry_checks": [
+    {
+      "left_wedge_deg": 5.0,
+      "right_wedge_deg": 5.2,
+      "ray_check_count": 200,
+      "max_ray_difference_mm": 1.5289266592284442e-14,
+      "max_affine_difference_px": 0.0,
+      "noiseless_max_error_mm": 7.105427357601002e-15,
+      "ray_matrix_condition": 22.340638640213392,
+      "displacement_covariance_per_sigma2_mm2": [
+        [
+          0.00010159021782738258,
+          5.985885863814361e-06,
+          0.00039289891622610825
+        ],
+        [
+          5.985885863814361e-06,
+          0.00010533965228808108,
+          0.0005986428170257706
+        ],
+        [
+          0.00039289891622610825,
+          0.0005986428170257706,
+          0.0491220023069847
+        ]
+      ]
+    },
+    {
+      "left_wedge_deg": 10.0,
+      "right_wedge_deg": 10.2,
+      "ray_check_count": 200,
+      "max_ray_difference_mm": 1.4450929182647245e-14,
+      "max_affine_difference_px": 0.0,
+      "noiseless_max_error_mm": 6.750155989720952e-14,
+      "ray_matrix_condition": 11.09208082025866,
+      "displacement_covariance_per_sigma2_mm2": [
+        [
+          9.674052919883205e-05,
+          2.368356286385223e-06,
+          9.661622460198425e-05
+        ],
+        [
+          2.368356286385223e-06,
+          9.97795792935458e-05,
+          0.00014491961017246553
+        ],
+        [
+          9.661622460198425e-05,
+          0.00014491961017246553,
+          0.011801697018539333
+        ]
+      ]
+    },
+    {
+      "left_wedge_deg": 15.0,
+      "right_wedge_deg": 15.2,
+      "ray_check_count": 200,
+      "max_ray_difference_mm": 1.2890545144167475e-14,
+      "max_affine_difference_px": 0.0,
+      "noiseless_max_error_mm": 1.4210854715202004e-14,
+      "ray_matrix_condition": 7.204547159568581,
+      "displacement_covariance_per_sigma2_mm2": [
+        [
+          9.195140510732308e-05,
+          1.660679846391784e-06,
+          4.06865360741665e-05
+        ],
+        [
+          1.660679846391784e-06,
+          9.865509615431905e-05,
+          5.9184576189965214e-05
+        ],
+        [
+          4.06865360741665e-05,
+          5.9184576189965214e-05,
+          0.004753250300181793
+        ]
+      ]
+    }
+  ],
+  "noise_assumptions": "Independent zero-mean Gaussian pixel components across views and two instants; reused standardized draws across sigma levels within one geometry.",
+  "excluded_effects": [
+    "calibration uncertainty",
+    "image formation",
+    "particle detection and correlation",
+    "mismatching",
+    "spatially correlated errors",
+    "flow dynamics"
+  ],
+  "velocity_note": "Divide displacement by a measured time interval; no time interval or measured velocity is asserted here.",
+  "environment": {
+    "python": "3.8.20",
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "platform": "Windows"
+  },
+  "script_sha256": "ebaa23294fb1b863f0a8a1533de41e3fa415e49adb8949da8717c9a9220f072c"
+}

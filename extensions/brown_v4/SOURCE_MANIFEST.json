@@ -1,0 +1,105 @@
+{
+  "schema": "anonymized_code_source_manifest_v1",
+  "model_version": "bbs-transverse-bundle-brown-v4",
+  "code_files": [
+    {
+      "path": "bbs_calib/__init__.py",
+      "sha256": "be8fccf83b9f1bceb47bc532852fbb861d8347cc757055bb4b80e91351b1c5f2",
+      "bytes": 145
+    },
+    {
+      "path": "bbs_calib/angles.py",
+      "sha256": "5e48e9f12e278dcd44363394079759c766bbd1f23c9dddeea82de081ebe56d17",
+      "bytes": 1377
+    },
+    {
+      "path": "bbs_calib/brown_distortion.py",
+      "sha256": "f67822e5db5f9aa08d06b2d77e0fd052b945afe141be2296ef0763044cd625c4",
+      "bytes": 5868
+    },
+    {
+      "path": "bbs_calib/config.py",
+      "sha256": "7999935ecc9b36cfa6c461073e873993c3d1dde340ffbc2b2ddca8a2ed3ac068",
+      "bytes": 10427
+    },
+    {
+      "path": "bbs_calib/geometry.py",
+      "sha256": "c977fa30ff13eae0fc65da573f2173c4416b6a3355fc6d7ea563fe33c23dd1a0",
+      "bytes": 3864
+    },
+    {
+      "path": "bbs_calib/hardware_refinement.py",
+      "sha256": "41d1c140d6e299b021347624b26950b1964c9c2311522d4b80d993b06ea2eca2",
+      "bytes": 3474
+    },
+    {
+      "path": "bbs_calib/image_inputs.py",
+      "sha256": "b6e5355cdc810867d7d11776e63bbec8bde35e25f75ffb18e8290b8cd87724c6",
+      "bytes": 5034
+    },
+    {
+      "path": "bbs_calib/initialization.py",
+      "sha256": "9554635cefbf7976eea9e5812f2bde7ed65135bffacc02d2199ec42af044f88b",
+      "bytes": 2016
+    },
+    {
+      "path": "bbs_calib/io.py",
+      "sha256": "8e10015ab17a750f4be031da7c860ece1cd28c05a1738f06ecc5963bd12744d2",
+      "bytes": 3730
+    },
+    {
+      "path": "bbs_calib/joint_bundle.py",
+      "sha256": "e6557d01080eb8b4654b288232cc59f94d551d083f6ec167230a1939850b1e03",
+      "bytes": 15972
+    },
+    {
+      "path": "bbs_calib/optimization.py",
+      "sha256": "68fbe52352438d7656c4de23bfe0b59ea7a07dff7025c993fc3ee2ae398aab48",
+      "bytes": 32714
+    },
+    {
+      "path": "bbs_calib/projection.py",
+      "sha256": "c8861a77067b1d7390d514de769005d93581b76739d5a2a7124a2c2f39744644",
+      "bytes": 2381
+    },
+    {
+      "path": "bbs_calib/reconstruction.py",
+      "sha256": "b3fda0f407e6888d8face40add4beb196cf0c0e73a03ebfbbdc93feb9598ccb5",
+      "bytes": 5409
+    },
+    {
+      "path": "bbs_calib/solver_search.py",
+      "sha256": "42b684fabacab94feb9436cbf592be31bcbd42769705ccd2791ff9b2077e7b27",
+      "bytes": 7148
+    },
+    {
+      "path": "bbs_calib/sparse_solver.py",
+      "sha256": "86549e725d16f43a733f3d5b50ffcde0b2c2e8666967401d3454f521e8e3eb13",
+      "bytes": 7297
+    },
+    {
+      "path": "bbs_calib/validation.py",
+      "sha256": "5068e63b3091dba194249076cc0261edb776f63750ee4c111bc8e6f0d1e2d7d0",
+      "bytes": 6141
+    },
+    {
+      "path": "joint_calibrate.py",
+      "sha256": "83e193c4fcee11e127a7717a783399f83fca84bc677c151f40556df1343599ca",
+      "bytes": 13446
+    },
+    {
+      "path": "joint_reconstruct.py",
+      "sha256": "ec94f922db126e23466813a840b93d2fd84c4f06992369638fac0140f305a52e",
+      "bytes": 3757
+    }
+  ],
+  "code_files_count": 18,
+  "runtime": {
+    "python": "3.8.20",
+    "numpy": "1.24.4",
+    "scipy": "1.10.1",
+    "opencv": "4.10.0"
+  },
+  "license_status": "BSD-3-Clause; see the repository-root LICENSE",
+  "data_status": "No experimental images, observed point coordinates, or fitted calibration data included"
+}
